@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Web-Clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 800px;
+            background-image: url("https://source.unsplash.com/user/ajaykarwal");
+            background-repeat: no-repeat;
+            position: relative;
+            background-size: cover;
+        }
+        .quotation{
+            position: absolute;
+            top:28%;
+            left: 22%;
+            font-size: 1.5rem;
+            width: 30%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        .quote, .author{
+            text-shadow: 2px 2px 2px darkgrey;
+        }
+        .greeting {
+            color: #fff;
+            position: absolute;
+            bottom: 45%;
+            left: 21%;
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            line-height: 40px;
+            text-shadow: 2px 2px 2px darkgrey;
+        }
+
+        .time {
+            color: #fff;
+            font-size: 12rem;
+            position: absolute;
+            bottom: 20%;
+            left: 20%;
+            font-weight: 600;
+            margin: 0;
+            width:45%;
+            text-shadow:2px 2px 2px rgba(206,89,55,0)
+        }
+
+        .location {
+            color: #fff;
+            position: absolute;
+            bottom: 13%;
+            left: 21%;
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            padding: 1%;
+            text-shadow: 2px 2px 2px darkgrey;
+        }
+
+        .icon {
+            color: #fff;
+
+        }
+        .inform{
+            background-image: url("./bgc.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:black;
+            height: 400px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cell{
+            height: 200px;
+            width: 50%;
+            padding-left: 5%;
+            padding-top:30px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .title{
+            color:rgb(103,103,103);
+            margin-bottom:3%;
+        }
+        .content{
+            font-size: 3rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="quotation">
+        <p class="quote"></p>
+           <p class="author"></p>
+        </div>
+        <div class="greeting">
+            <i class="icon"></i>
+            <p class="words"></p>
+        </div>
+        <p class="time"></p>
+        <p class="location">IN Hong Kong</p>
+       
+    </div>
+    <div class="inform">
+        <div class="cell">
+            <p class="title">Current Location</p>
+            <p class="content">London</p>
+        </div>
+        <div class="cell">
+            <p class="title">Day of the Week</p>
+            <p class="content current_week"></p>
+        </div>
+        <div class="cell">
+            <p class="title">Month</p>
+            <p class="content current_month"></p>
+        </div>
+        <div class="cell">
+            <p class="title">Day of the Month</p>
+            <p class="content current_day" ></p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
+
